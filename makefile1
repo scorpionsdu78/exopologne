@@ -1,0 +1,13 @@
+t:
+	gcc -c -Wall -ansi -pedantic t.c -o t.o
+
+ex1open:
+	gcc -c -Wall -ansi -pedantic ex1open.c -o ex1open.o
+
+program:
+	gcc t.o ex1open.o program
+
+clean:
+	rm -rf *o 
+
+
