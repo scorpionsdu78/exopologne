@@ -1,0 +1,15 @@
+exercice3: exo3open.o t.o t.h 
+	gcc -Wall -ansi -pedantic exo3open.o t.o -o exercice3
+	
+t.o: t.c t.h
+	gcc -c -Wall -ansi -pedantic t.c
+
+exo3open.o: exo3open.c t.h
+	gcc -c -Wall -ansi -pedantic exo3open.c
+
+clean:
+	rm -rf *.o
+
+.PHONY: clean
+
+
